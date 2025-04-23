@@ -48,7 +48,7 @@ quickstart
 """
 
 from tavily import TavilyClient
-tavily = TavilyClient(api_key='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')
+tavily = TavilyClient(api_key='')
 
 response = tavily.search(query="Where does Messi play right now?", max_results=3)
 context = [{"url": obj["url"], "content": obj["content"]} for obj in response['results']]
@@ -68,7 +68,7 @@ response
 
 from langchain_openai import ChatOpenAI
 import os
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = ''
 
 llm = ChatOpenAI(model="gpt-4o-mini", temperature = 0)
 
